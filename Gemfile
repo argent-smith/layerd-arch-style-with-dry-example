@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '3.1.0'
+ruby '3.1.2'
 
 # dependency managment
 gem 'dry-system', '0.25'
@@ -13,8 +13,8 @@ gem 'dry-monads', '1.3'
 gem 'dry-schema', '1.9'
 
 # persistance layer
-gem 'dry-types', '1.5'
 gem 'dry-struct', '1.0'
+gem 'dry-types', '1.5'
 gem 'sqlite3'
 
 # HTTP transport layer
@@ -44,8 +44,13 @@ group :test, :development do
   gem 'dotenv', '~> 2.4'
 
   # style check
+  gem 'ordinare', require: false
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'reek', require: false
   gem 'rubocop', require: false
   gem 'rubocop-rspec'
+  gem 'solargraph'
 end
 
 group :test do
